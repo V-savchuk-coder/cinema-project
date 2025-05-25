@@ -1,29 +1,13 @@
 import React, { useState } from "react";
 import "./CinemaHall.css";
 
-const CinemaHall = ({ selectedSeats, setSelectedSeats }) => {
-    const rows = 5; // Кількість рядів
-    const cols = 10; // Кількість місць у ряді
-    const totalSeats = rows * cols; // Загальна кількість місць
+const CinemaHall = ({ selectedSeats, setSelectedSeats, bookedSeats }) => {
+    const rows = 5;
+    const cols = 10;
+    const totalSeats = rows * cols;
 
-    // Генеруємо початковий список місць
-    const [seats, setSeats] = useState(
-        Array.from({ length: totalSeats }, (_, index) => ({
-            id: index + 1, // Унікальний номер для кожного місця
-            reserved: false, // Логічне значення для заброньованих місць
-        }))
-    );
-
-    // Логіка вибору місця
     const handleSeatSelect = (seatId) => {
-        const updatedSeats = seats.map((seat) =>
-            seat.id === seatId
-                ? { ...seat, reserved: !seat.reserved } // Якщо вибрано, змінюємо стан
-                : seat
-        );
-        setSeats(updatedSeats);
-
-        // Оновлюємо список вибраних місць
+        if (bookedSeats.includes(seatId)) return; // Заброньовані місця не можна вибрати
         if (selectedSeats.includes(seatId)) {
             setSelectedSeats(selectedSeats.filter((id) => id !== seatId));
         } else {
@@ -32,21 +16,24 @@ const CinemaHall = ({ selectedSeats, setSelectedSeats }) => {
     };
 
     return (
-        <div className="cinema-container">
-            <div className="screen">Screen</div> {/* Позначення екрана */}
-            <div className="cinema-hall">
-                {seats.map((seat) => (
+        <div className="cinema-hall">
+            {Array.from({ length: totalSeats }, (_, index) => {
+                const seatId = index + 1;
+                const isBooked = bookedSeats.includes(seatId);
+                const isSelected = selectedSeats.includes(seatId);
+
+                return (
                     <div
-                        key={seat.id}
-                        className={`seat ${seat.reserved ? "reserved" : ""} ${
-                            selectedSeats.includes(seat.id) ? "selected" : ""
+                        key={seatId}
+                        className={`seat ${isBooked ? "reserved" : ""} ${
+                            isSelected ? "selected" : ""
                         }`}
-                        onClick={() => !seat.reserved && handleSeatSelect(seat.id)} // Вибір місця, якщо воно не заброньоване
+                        onClick={() => !isBooked && handleSeatSelect(seatId)}
                     >
-                        {seat.id} {/* Номер місця */}
+                        {seatId}
                     </div>
-                ))}
-            </div>
+                );
+            })}
         </div>
     );
 };
