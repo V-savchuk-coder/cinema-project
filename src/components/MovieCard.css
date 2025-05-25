@@ -26,3 +26,19 @@
     font-size: 14px;
     color: #666;
 }
+
+.book-now-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4757;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.book-now-btn:hover {
+    background-color: #ff6b81;
+}

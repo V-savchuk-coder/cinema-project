@@ -10,7 +10,6 @@ const MovieList = ({ movies }) => {
 
     return (
         <div>
-            {/* Поле пошуку */}
             <input
                 type="text"
                 placeholder="Search by title"
@@ -19,7 +18,6 @@ const MovieList = ({ movies }) => {
                 className="search-input"
             />
 
-            {/* Список карток */}
             <div className="movie-list">
                 {filteredMovies.map(movie => (
                     <MovieCard key={movie.id} movie={movie} />

@@ -5,7 +5,7 @@ const movies = [
         description: "A mind-bending thriller by Christopher Nolan.",
         genre: "Sci-Fi",
         showtime: "2023-11-01 19:00",
-        poster: "https://via.placeholder.com/300x400",
+        poster: "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg",
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ const movies = [
         description: "A timeless romantic drama.",
         genre: "Romance",
         showtime: "2023-11-02 20:00",
-        poster: "https://via.placeholder.com/300x400",
+        poster: "https://m.media-amazon.com/images/I/71ZJ8am0mKL._AC_UF894,1000_QL80_.jpg",
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ const movies = [
         description: "Superhero action film by Marvel.",
         genre: "Action",
         showtime: "2023-11-03 18:30",
-        poster: "https://via.placeholder.com/300x400",
+        poster: "https://m.media-amazon.com/images/I/818xFyWmm9L.jpg",
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ const movies = [
         description: "A hacker discovers the reality is a simulation.",
         genre: "Sci-Fi",
         showtime: "2023-11-04 21:00",
-        poster: "https://via.placeholder.com/300x400",
+        poster: "https://cdn.europosters.eu/image/1300/104636.jpg",
     },
     {
         id: 5,
@@ -37,7 +37,7 @@ const movies = [
         description: "A musical love story set in Los Angeles.",
         genre: "Musical",
         showtime: "2023-11-05 19:45",
-        poster: "https://via.placeholder.com/300x400",
+        poster: "https://fiu-original.b-cdn.net/fontsinuse.com/use-images/47/47378/47378.jpeg?filename=1.jpg",
     },
     {
         id: 6,
@@ -45,7 +45,7 @@ const movies = [
         description: "A classic mafia family drama.",
         genre: "Crime",
         showtime: "2023-11-06 17:00",
-        poster: "https://via.placeholder.com/300x400",
+        poster: "https://cdn.europosters.eu/image/750/106943.jpg",
     },
     {
         id: 7,
@@ -53,7 +53,7 @@ const movies = [
         description: "Exploring space and time to save humanity.",
         genre: "Sci-Fi",
         showtime: "2023-11-07 20:30",
-        poster: "https://via.placeholder.com/300x400",
+        poster: "https://cdn.europosters.eu/image/750/23157.jpg",
     },
     {
         id: 8,
@@ -61,7 +61,7 @@ const movies = [
         description: "A dark psychological portrait of a troubled man.",
         genre: "Drama",
         showtime: "2023-11-08 22:00",
-        poster: "https://via.placeholder.com/300x400",
+        poster: "https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/1500x1500/products/89058/93685/Joker-2019-Final-Style-steps-Poster-buy-original-movie-posters-at-starstills__62518.1669120603.jpg?c=2",
     },
     {
         id: 9,
@@ -69,7 +69,7 @@ const movies = [
         description: "A boy's journey to the Land of the Dead.",
         genre: "Animation",
         showtime: "2023-11-09 16:30",
-        poster: "https://via.placeholder.com/300x400",
+        poster: "https://cdn.europosters.eu/image/750/56184.jpg",
     },
     {
         id: 10,
@@ -77,7 +77,7 @@ const movies = [
         description: "A noble family's struggle on a desert planet.",
         genre: "Sci-Fi",
         showtime: "2023-11-10 19:15",
-        poster: "https://via.placeholder.com/300x400",
+        poster: "https://cdn.europosters.eu/image/1300/122815.jpg",
     },
 ];
 

@@ -1,0 +1,60 @@
+.cinema-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1a1a; /* Темний фон залу */
+    color: #fff; /* Білий текст */
+}
+
+.screen {
+    width: 80%;
+    padding: 10px;
+    text-align: center;
+    background-color: #444; /* Сірий фон для екрана */
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Тінь для екрана */
+}
+
+.cinema-hall {
+    display: grid;
+    grid-template-columns: repeat(10, 50px); /* 10 місць у ряді */
+    gap: 10px; /* Відстань між місцями */
+    margin-top: 20px;
+}
+
+.seat {
+    height: 50px;
+    width: 50px;
+    background-color: #2ecc71; /* Зелені — доступні місця */
+    color: #fff; /* Білий текст */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    border-radius: 8px; /* Згладжені кути сидінь */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.seat.reserved {
+    background-color: #e74c3c; /* Червоні — заброньовані */
+    cursor: not-allowed; /* Заблокований курсор */
+}
+
+.seat.selected {
+    background-color: #3498db; /* Сині — обрані */
+}
+
+@media (max-width: 768px) {
+    .screen {
+        width: 100%;
+    }
+
+    .cinema-hall {
+        grid-template-columns: repeat(5, 50px); /* На мобільному зменшуємо ширину ряду */
+    }
+}

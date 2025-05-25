@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./MovieCard.css";
 
 const MovieCard = ({ movie }) => {
@@ -10,6 +11,9 @@ const MovieCard = ({ movie }) => {
                 <p>{movie.description}</p>
                 <p><strong>Genre:</strong> {movie.genre}</p>
                 <p><strong>Showtime:</strong> {movie.showtime}</p>
+                <Link to={`/booking/${movie.id}`} className="book-now-btn">
+                    Book Now
+                </Link>
             </div>
         </div>
     );
