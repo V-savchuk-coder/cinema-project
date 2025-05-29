@@ -37,24 +37,121 @@
     font-size: 0.9rem;
     border-radius: 8px; /* Згладжені кути сидінь */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 1px solid #ddd; /* Легкий контур сидінь */
+}
+
+.seat:hover {
+    transform: scale(1.1); /* Легкий збільшений ефект при наведенні */
 }
 
 .seat.reserved {
-    background-color: #e74c3c; /* Червоні — заброньовані */
-    cursor: not-allowed; /* Заблокований курсор */
+    background-color: #e74c3c; /* Червоні — заброньовані місця */
+    cursor: not-allowed; /* Іконка "заборонено" */
+    border: 1px solid #e74c3c; /* Чіткий контур для заброньованих місць */
 }
 
 .seat.selected {
-    background-color: #3498db; /* Сині — обрані */
+    background-color: #3498db; /* Сині — обрані користувачем */
+    border: 1px solid #2980b9; /* Тонкий контур */
 }
 
-@media (max-width: 768px) {
-    .screen {
-        width: 100%;
-    }
+.cinema-container h2,
+.cinema-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
 
-    .cinema-hall {
-        grid-template-columns: repeat(5, 50px); /* На мобільному зменшуємо ширину ряду */
+.booking-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1a1a; /* Чорний фон */
+    color: #fff;
+}
+
+.booking-container h2 {
+    color: #ff4757; /* Яскраво-червоний */
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.booking-container p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.booking-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff4757; /* Яскраво-червоний */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.booking-button:hover {
+    background-color: #e8413e;
+}
+
+/* Стилізація форми */
+.booking-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    max-width: 400px;
+    background-color: #121212; /* Темно-чорний фон */
+    padding: 20px;
+    border: 1px solid #ff4757; /* Червона рамка */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.booking-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    background-color: #1a1a1a; /* Чорний фон */
+    color: #fff;
+}
+
+.booking-form input::placeholder {
+    color: #888; /* Світло-сірий текст */
+}
+
+.booking-form input:focus {
+    border-color: #ff4757; /* Червона рамка при фокусі */
+}
+
+.booking-form button {
+    padding: 10px;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+.booking-form button:hover {
+    background-color: #e8413e;
+}
+
+/* Адаптивність форми */
+@media (max-width: 768px) {
+    .booking-form {
+        width: 100%;
+        padding: 15px;
     }
 }

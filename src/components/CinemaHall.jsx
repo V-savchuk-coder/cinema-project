@@ -9,11 +9,15 @@ const CinemaHall = ({ selectedSeats, setSelectedSeats, bookedSeats }) => {
     const handleSeatSelect = (seatId) => {
         if (bookedSeats.includes(seatId)) return; // Заброньовані місця не можна вибрати
         if (selectedSeats.includes(seatId)) {
+            // Якщо місце вже вибране, то зняти вибір
             setSelectedSeats(selectedSeats.filter((id) => id !== seatId));
         } else {
+            // Якщо місце не вибране — додати його до вибраних
             setSelectedSeats([...selectedSeats, seatId]);
         }
     };
+
+
 
     return (
         <div className="cinema-hall">
